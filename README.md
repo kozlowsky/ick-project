@@ -19,3 +19,6 @@ npm run build
 ```
 npm run lint
 ```
+
+### About
+Konrad: 'My name is Konrad. I read books. Don't ask me about genres, because I read everything (it depends on current season).' 
