@@ -19,6 +19,8 @@ npm run build
 ```
 npm run lint
 ```
+### Docs
+[Documentation is here!](https://docs.google.com/document/d/1oIrKccZuC2SVqH4-dBhYmxt60b2izAR2HKbUssYddBo/edit?usp=sharing)
 
 ### About
 Konrad: 'My name is Konrad. I read books. Don't ask me about genres, because I read everything (it depends on current season).' 
