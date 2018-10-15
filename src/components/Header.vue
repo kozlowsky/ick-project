@@ -11,11 +11,11 @@
                 <h1 class="display-4 font-weight-medium ">Przygarnij.Go</h1>
                 <p class="headline">Witaj w schronisku on-line!</p>
                 <div>
-                    <v-btn color="success">Zaloguj się</v-btn>
-                    <v-btn color="error">Zarejestruj się</v-btn>
+                    <v-btn color="success" @click="$router.push('/login')">Zaloguj się</v-btn>
+                    <v-btn color="error" @click="$router.push('/register')">Zarejestruj się</v-btn>
                 </div>
                 <div class="arrow-down">
-                    <v-btn fab icon>
+                    <v-btn fab icon @click="$vuetify.goTo('#aboutApplication')">
                         <v-icon x-large fab color="white">
                             keyboard_arrow_down
                         </v-icon>

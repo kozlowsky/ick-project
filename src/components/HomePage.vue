@@ -18,7 +18,7 @@
 <template>
     <div>
         <Header mb-4/>
-        <AboutApplication/>
+        <AboutApplication id="aboutApplication"/>
         <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" height="300">
             <v-container fill-height>
                 <v-layout align-center justify-center>
