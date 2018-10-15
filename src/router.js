@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Cats from './components/Cats'
+import HomePage from './components/HomePage'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [{
         path: '/',
-        name: 'Cats',
-        component: Cats
+        name: 'HomePage',
+        component: HomePage
     }
     ]
 })
