@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HomePage from './components/HomePage'
 import Login from './components/Login'
 import Register from './components/Register'
+import Cats from './components/Cats'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
             path: '/register',
             name: 'Register',
             component: Register
+        },
+        {
+            path: '/secret',
+            name: 'Cats',
+            component: Cats
         }
     ]
 })
