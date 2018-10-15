@@ -7,7 +7,7 @@
 <template>
     <v-footer
             height="auto"
-            color="cyan"
+            color="#fb7372"
     >
         <v-layout
                 justify-center

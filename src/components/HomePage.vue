@@ -19,7 +19,7 @@
     <div>
         <Header mb-4/>
         <AboutApplication id="aboutApplication"/>
-        <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" height="300">
+        <v-parallax :src="require('../assets/pexels-photo-1126384.jpeg')" height="300">
             <v-container fill-height>
                 <v-layout align-center justify-center>
                     <h1 class="display-2">O Autorach</h1>

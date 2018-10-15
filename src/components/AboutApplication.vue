@@ -50,7 +50,7 @@
                             tincidunt mauris in pretium. Curabitur eget semper nisl.
 
                         </p>
-                        <v-btn color="success">
+                        <v-btn color="success" @click="$router.push('/register')">
                             Zarejestruj się
                         </v-btn>
                     </v-layout>
