@@ -7,7 +7,7 @@ const state = {
             type: 'adopcja',
             description: 'Mam na sprzedaż kota, nówka sztuka nie śmigana',
             address: 'Warszawa, Kocia 12',
-            species: 'Kot',
+            species: 'Kot domowy',
             gender: 'Female',
             age: 2,
             colors: ['czarny', 'biały'],
@@ -22,7 +22,7 @@ const state = {
             description: 'Główna postać ze znajej kreskówki nie radzi sobie z końcem kariery' +
                 'prosi o wsparcie',
             address: 'Wrocław, Psia 12',
-            species: 'Pies',
+            species: 'Pitbull',
             gender: 'Male',
             age: 15,
             colors: ['czerwony'],
