@@ -4,6 +4,7 @@ import ads from './modules/ads'
 import toast from './modules/toast'
 import user from './modules/user'
 import users from './modules/users'
+import species from './modules/species'
 
 Vue.use(Vuex);
 
@@ -12,6 +13,7 @@ export default new Vuex.Store({
         ads,
         toast,
         user,
-        users
+        users,
+        species
     }
 })

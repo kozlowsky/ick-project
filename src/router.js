@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomePage from './components/HomePage'
-import Login from './components/Login'
-import Register from './components/Register'
-import Cats from './components/Cats'
+import HomePage from './views/HomePage'
+import Login from './views/Login'
+import Register from './views/Register'
+import Cats from './views/Cats'
 
 Vue.use(Router)
 

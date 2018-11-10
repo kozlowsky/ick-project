@@ -1,8 +1,8 @@
 <script>
-    import Header from './Header'
-    import AboutApplication from './AboutApplication'
-    import AboutAuthors from './AboutAuthors'
-    import Footer from './Footer'
+    import Header from '../components/Header'
+    import AboutApplication from '../components/AboutApplication'
+    import AboutAuthors from '../components/AboutAuthors'
+    import Footer from '../components/Footer'
 
     export default {
         name: "HomePage",

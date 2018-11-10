@@ -26,8 +26,7 @@ const actions = {
                 commit(LOGIN_USER, users[1])
             }
 
-            if (rootGetters.isUserLoggedIn) resolve();
-            else reject();
+            rootGetters.isUserLoggedIn ? resolve() : reject();
         });
     }
 }
