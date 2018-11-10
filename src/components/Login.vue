@@ -1,4 +1,5 @@
 <script>
+    import {LOGIN_USER} from "../store/actions/user";
 
     export default {
         name: "Login",
@@ -10,12 +11,14 @@
         },
         methods: {
             loginUser() {
-                if(this.user_login === 'user' && this.user_password === 'password') {
-                    this.successfulToast('Zalogowano pomyślnie!');
-                } else {
+                this.$store.dispatch(LOGIN_USER, {
+                    login: this.user_login,
+                    password: this.user_password
+                }).then(() => {
+                    this.successfulToast('Zalogowany pomyślnie!')
+                }).catch(() => {
                     this.errorToast('Login i hasło są niepoprawne!');
-                }
-
+                })
             }
         }
     }
