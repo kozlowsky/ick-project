@@ -17,12 +17,18 @@ const mutations = {
 
 const actions = {
     [LOGIN_USER]: ({commit, rootGetters}, loginData) => {
-        let users = rootGetters.getUsers;
-        if (loginData.login === 'user' && loginData.password === 'password') commit(LOGIN_USER, users[0]);
-        else if (loginData.login === 'admin' && loginData.password === 'password') commit(LOGIN_USER, users[1])
-        else throw 'Login i hasło się nie zgadzają!';
+        return new Promise((resolve, reject) => {
+            let users = rootGetters.getUsers;
+            if (loginData.login === 'user' && loginData.password === 'password') {
+                commit(LOGIN_USER, users[0]);
+            }
+            else if (loginData.login === 'admin' && loginData.password === 'password') {
+                commit(LOGIN_USER, users[1])
+            }
 
-        return getters.isUserLoggedIn;
+            if (rootGetters.isUserLoggedIn) resolve();
+            else reject();
+        });
     }
 }
 

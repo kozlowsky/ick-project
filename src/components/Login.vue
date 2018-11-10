@@ -16,7 +16,7 @@
                     password: this.user_password
                 }).then(() => {
                     this.successfulToast('Zalogowany pomyślnie!')
-                }).catch(() => {
+                }).catch(err => {
                     this.errorToast('Login i hasło są niepoprawne!');
                 })
             }
