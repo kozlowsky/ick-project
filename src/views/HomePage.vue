@@ -10,7 +10,7 @@
             AboutAuthors,
             Header,
             AboutApplication,
-            Footer
+            Footer,
         }
     }
 </script>
@@ -18,6 +18,7 @@
 <template>
     <div>
         <Header mb-4/>
+
         <AboutApplication id="aboutApplication"/>
         <v-parallax :src="require('../assets/pexels-photo-1126384.jpeg')" height="300">
             <v-container fill-height>
