@@ -1,17 +1,20 @@
 <template>
     <v-app>
-        <router-view />
+        <Toast/>
+        <router-view/>
     </v-app>
 </template>
 
 <script>
 
     import Header from './components/Header'
+    import Toast from './components/common/Toast'
 
     export default {
         name: 'App',
         components: {
-          Header
+            Header,
+            Toast
         },
         data() {
             return {

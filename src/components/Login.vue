@@ -1,12 +1,28 @@
 <script>
+
     export default {
-        name: "Login"
+        name: "Login",
+        data() {
+            return {
+                user_login: '',
+                user_password: ''
+            }
+        },
+        methods: {
+            loginUser() {
+                if(this.user_login === 'user' && this.user_password === 'password') {
+                    this.successfulToast('Zalogowano pomyślnie!');
+                } else {
+                    this.errorToast('Login i hasło są niepoprawne!');
+                }
+
+            }
+        }
     }
 </script>
 
 <template>
     <v-container class="background-image" fill-height fluid>
-
         <v-layout>
             <v-layout align-center justify-center>
                 <v-card width="500">
@@ -18,13 +34,19 @@
                     <v-card-text>
                         <v-form>
                             <v-layout column>
-                                <v-text-field prepend-icon="person" label="Login">
-
+                                <v-text-field
+                                        v-model="user_login"
+                                        prepend-icon="person"
+                                        label="Login">
                                 </v-text-field>
-                                <v-text-field prepend-icon="lock" type="password" label="Skomplikowany ciąg znaków">
-
+                                <v-text-field
+                                        v-model="user_password"
+                                        prepend-icon="lock"
+                                        type="password"
+                                        label="Skomplikowany ciąg znaków">
                                 </v-text-field>
-                                <v-btn color="success">Zaloguj się</v-btn>
+
+                                <v-btn @click="loginUser" color="success">Zaloguj się</v-btn>
                                 <v-btn color="error" @click="$router.push('/register')">Załóż konto</v-btn>
                             </v-layout>
                         </v-form>
