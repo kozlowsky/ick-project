@@ -7,6 +7,12 @@
 
     export default {
         name: "Advert",
+        props: {
+            adId: {
+                type: Number,
+                default: 1
+            }
+        },
         components: {
             SpecieWiki,
             AdvertiserInfo,
@@ -25,15 +31,13 @@
                 ],
 
                 currentTab: 'tab-1',
-
-
             }
         }
     }
 </script>
 
 <template>
-    <v-layout align-center justify-center>
+    <v-layout justify-center pt-5>
         <v-flex xs12 md8>
             <v-tabs
                     v-model="currentTab"
@@ -49,12 +53,12 @@
                 </v-tab>
             </v-tabs>
 
-            <v-tabs-items v-model="currentTab">
+            <v-tabs-items v-model="currentTab" >
                 <v-tab-item
                         value="tab-1">
-                    <v-card flat height="600">
+                    <v-card flat>
                         <v-card-text>
-                            <AdvertInfo/>
+                            <AdvertInfo :adId="adId" />
                         </v-card-text>
                     </v-card>
                 </v-tab-item>
@@ -62,31 +66,31 @@
                         value="tab-2">
                     <v-card flat height="600">
                         <v-card-text>
-                            <AnimalCards/>
+                            <AnimalCards :adId="adId"/>
                         </v-card-text>
                     </v-card>
                 </v-tab-item>
                 <v-tab-item
                         value="tab-3">
-                    <v-card flat height="600">
+                    <v-card flat>
                         <v-card-text>
-                            <AnimalPhotos/>
+                            <AnimalPhotos :adId="adId"/>
                         </v-card-text>
                     </v-card>
                 </v-tab-item>
                 <v-tab-item
                         value="tab-4">
-                    <v-card flat height="600">
+                    <v-card flat>
                         <v-card-text>
-                            <AdvertiserInfo/>
+                            <AdvertiserInfo :adId="adId"/>
                         </v-card-text>
                     </v-card>
                 </v-tab-item>
                 <v-tab-item
                         value="tab-5">
-                    <v-card flat height="600">
+                    <v-card flat>
                         <v-card-text>
-                            <SpecieWiki/>
+                            <SpecieWiki :adId="adId"/>
                         </v-card-text>
                     </v-card>
                 </v-tab-item>

@@ -54,6 +54,10 @@
                         </span>
                     </v-flex>
                 </v-layout>
+                <v-layout column>
+                    <v-btn color="cyan" v-if="advert.type === 'Wirtualna Adopcja'" dark>Dofinansuj zwierzaka</v-btn>
+                    <v-btn color="cyan" dark>Wyprowadź na spacer</v-btn>
+                </v-layout>
             </v-flex>
         </v-layout>
         <v-layout id="advert-info" class="my-3 px-4" row wrap>

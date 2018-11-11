@@ -20,7 +20,6 @@
 <template>
     <div>
         <Header mb-4/>
-        <Advert/>
         <AboutApplication id="aboutApplication"/>
         <v-parallax :src="require('../assets/pexels-photo-1126384.jpeg')" height="300">
             <v-container fill-height>

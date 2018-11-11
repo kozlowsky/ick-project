@@ -13,6 +13,7 @@
             }
         },
         created() {
+            alert(this.$store.getters.ads[this.adId]);
             this.advert = this.$store.getters.ads[this.adId];
         }
     }
