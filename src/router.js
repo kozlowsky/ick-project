@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomePage from './components/HomePage'
-import Login from './components/Login'
-import Register from './components/Register'
-import Cats from './components/Cats'
+import HomePage from './views/HomePage'
+import Login from './views/Login'
+import Register from './views/Register'
+import Cats from './views/Cats'
+import Advertisment from './views/Advertisment'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
             path: '/register',
             name: 'Register',
             component: Register
+        },
+        {
+            path: '/advert/:id',
+            name: 'Advertisment',
+            component: Advertisment
         },
         {
             path: '/secret',

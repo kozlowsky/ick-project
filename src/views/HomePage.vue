@@ -1,8 +1,9 @@
 <script>
-    import Header from './Header'
-    import AboutApplication from './AboutApplication'
-    import AboutAuthors from './AboutAuthors'
-    import Footer from './Footer'
+    import Header from '../components/Header'
+    import AboutApplication from '../components/AboutApplication'
+    import AboutAuthors from '../components/AboutAuthors'
+    import Footer from '../components/Footer'
+    import Advert from '../components/adverts/Advert'
 
     export default {
         name: "HomePage",
@@ -10,7 +11,8 @@
             AboutAuthors,
             Header,
             AboutApplication,
-            Footer
+            Footer,
+            Advert
         }
     }
 </script>

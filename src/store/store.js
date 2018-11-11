@@ -1,22 +1,21 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import ads from './modules/ads'
-import wiki from './modules/wiki'
+import toast from './modules/toast'
+import user from './modules/user'
+import users from './modules/users'
+import species from './modules/species'
+import text from './modules/text'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  },
-  modules: {
-    ads,
-    wiki
-  }
+    modules: {
+        ads,
+        toast,
+        user,
+        users,
+        species,
+        text
+    }
 })
