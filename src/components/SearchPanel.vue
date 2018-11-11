@@ -6,29 +6,27 @@ export default {
     name: "SearchPanel",
     data () {
         return {
-            specie: '',
+            filters: {
+                specie: '', 
+                gender: '', 
+                breed: '', 
+                color: '',
+                age: 0
+            },
+            colors: [],
             species: [],
-
-            gender: '',
             genders: [
                 'Samiec',
                 'Samica',
                 'Obojętne'
             ],
-
-            breed: '',
             breeds: [],
-            currentBreeds: [],
-
-
-            colors: [],
-            age: 0
-
+            currentBreeds: []
         }
     },
     methods: {
         setBreeds () {
-            let index = this.species.indexOf(this.specie);
+            let index = this.species.indexOf(this.filters.specie);
             this.currentBreeds = this.breeds[index];
         }
     },
@@ -63,30 +61,30 @@ export default {
         </v-card-title>
         <v-card-text>
             <v-layout row>
-                <v-autocomplete v-model="specie" label="Wpisz gatunek pupila" :items="species" @change="setBreeds">
+                <v-autocomplete v-model="filters.specie" label="Wpisz gatunek pupila" :items="species" @change="setBreeds">
                 </v-autocomplete>
             </v-layout>
             <v-layout row>
-                <v-select v-model="breed" :items="currentBreeds" :disabled="specie === ''" label="Wpisz gatunek/rasę zwierzęcia">
+                <v-select v-model="filters.breed" :items="currentBreeds" :disabled="filters.specie === ''" label="Wpisz gatunek/rasę zwierzęcia">
                 </v-select>
             </v-layout>
             <v-layout row>
                 <v-flex xs12 md4>
                     <p class="subheading">Płeć</p>
-                    <v-radio-group v-model="gender">
+                    <v-radio-group v-model="filters.gender">
                         <v-radio v-for="el in genders" :key="el" :label="`${el}`" :value="el"></v-radio>
                     </v-radio-group>
                 </v-flex>
                 <v-flex xs12 md4>
                     <p class="subheading">Barwa</p>
-                    <v-radio-group>
+                    <v-radio-group v-model="filters.color">
                         <v-radio v-for="el in colors" :key="el" :label="`${el}`" :value="el">
                         </v-radio>
                     </v-radio-group>
                 </v-flex>
                 <v-flex xs12 md4>
                     <p class="subheading">Wiek</p>
-                    <v-text-field v-model="age" :error-messages="ageErrors" @blur="$v.age.$touch()" @input="$v.age.$touch()">
+                    <v-text-field v-model="filters.age" :error-messages="ageErrors" @blur="$v.age.$touch()" @input="$v.age.$touch()">
                     </v-text-field>
                 </v-flex>
 
@@ -94,7 +92,7 @@ export default {
         </v-card-text>
         <v-card-actions>
             <v-spacer />
-            <v-btn :disabled="specie === ''" color="success">Szukaj</v-btn>
+            <v-btn :disabled="filters.specie === ''" color="success" @click="$emit('onSearchChanged', filters)">Szukaj</v-btn>
             <v-spacer />
         </v-card-actions>
     </v-card>
