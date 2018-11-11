@@ -1,12 +1,7 @@
 <script>
     export default {
         name: "AdvertInfo",
-        props: {
-            adId: {
-                type: Number,
-                default: 1
-            }
-        },
+        props: ['adId'],
         data() {
             return {
                 advert: null

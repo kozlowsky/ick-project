@@ -7,12 +7,7 @@
 
     export default {
         name: "Advert",
-        props: {
-            adId: {
-                type: Number,
-                default: 1
-            }
-        },
+        props: ['adId'],
         components: {
             SpecieWiki,
             AdvertiserInfo,
@@ -47,8 +42,7 @@
                     dark>
                 <v-tab
                         v-for="(el, i) in tabs"
-                        :key="i"
-                        :href="`#tab-${i+1}`">
+                        :key="i">
                     {{ el }}
                 </v-tab>
             </v-tabs>
