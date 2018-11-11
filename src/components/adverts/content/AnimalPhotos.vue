@@ -1,9 +1,16 @@
 <script>
     export default {
         name: "AnimalPhotos",
+        props: {
+            animalType: {
+                type: String,
+                default: 'owczarek'
+            },
+
+        },
         methods: {
             getDogImage(index) {
-                return require('../../../assets/pies/owczarek-' + index + '.jpeg');
+                return require('../../../assets/pies/' + this.animalType + '-' + index + '.jpeg');
             }
         }
     }

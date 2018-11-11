@@ -2,7 +2,10 @@ const state = {
     ads: [
         {
             id: 1,
-            advertiser: 'Jan Kowalski',
+            advertiser: 'Schronisko im. Kleksa we Wrocławiu',
+            advertiserType: 'Schronisko',
+            advertiserInfo: 'Schronisko przy ulicy Kociej',
+            advertiserTelephone: '700300400',
             title: 'Super kot',
             type: 'adopcja',
             description: 'Mam na sprzedaż kota, nówka sztuka nie śmigana',
@@ -26,7 +29,10 @@ const state = {
         },
         {
             id: 2,
-            advertiser: 'Schronisko im. Kleksa we Wrocławiu',
+            advertiser: 'Jan Kowalski',
+            advertiserType: 'Prywatny',
+            advertiserInfo: null,
+            advertiserTelephone: '800999312',
             title: 'Piesek Leszek',
             type: 'Wirtualna Adopcja',
             description: 'Główna postać ze znajej kreskówki nie radzi sobie z końcem kariery' +
