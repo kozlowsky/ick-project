@@ -10,7 +10,6 @@
             }
         },
         created() {
-            alert(this.$route.params.id);
             this.adId = this.$route.params.id;
         }
     }
