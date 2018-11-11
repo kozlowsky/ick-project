@@ -5,6 +5,7 @@ import Login from './views/Login'
 import Register from './views/Register'
 import Cats from './views/Cats'
 import Advertisment from './views/Advertisment'
+import Search from './views/Search'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
             path: '/advert/:id',
             name: 'Advertisment',
             component: Advertisment
+        },
+        {
+            path: '/search',
+            name: 'Search',
+            component: Search
         },
         {
             path: '/secret',

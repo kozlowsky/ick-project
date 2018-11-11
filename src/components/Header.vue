@@ -1,29 +1,29 @@
 <script>
-    import SearchPanel from "./SearchPanel";
+import SearchPanel from "./SearchPanel";
 
-    export default {
-        name: "HomePage",
-        components: {SearchPanel},
-    }
+export default {
+    name: "HomePage",
+    components: { SearchPanel }
+
+}
 </script>
 
 <template>
     <v-img class="header-image" :src="require('../assets/pexels-photo-213399.jpeg')">
-        <v-container fill-height>
-            <v-layout align-center justify-center white--text>
+        <v-container>
+            <v-layout row wrap align-center justify-center white--text>
                 <!--<div class="text-xs-center">-->
                 <!--<h1 class="display-2 font-weight-medium ">Przygarnij.Go</h1>-->
                 <!--<p class="headline">Witaj w schronisku on-line!</p>-->
                 <!--</div>-->
 
-                <v-flex xs12 md8>
+                <v-flex xs12 sm12 md8 lg8>
                     <div class="text-sm-center">
                         <h1 class="display-2 font-weight-medium ">Przygarnij.Go</h1>
                         <p class="headline">Witaj w schronisku on-line!</p>
                     </div>
-                    <SearchPanel/>
+                    <SearchPanel @onSearchChanged="$router.push('search')"/>
                 </v-flex>
-
 
                 <div class="arrow-down">
                     <v-btn fab icon @click="$vuetify.goTo('#aboutApplication')">
@@ -33,17 +33,19 @@
                     </v-btn>
                 </div>
             </v-layout>
+
         </v-container>
+
     </v-img>
 </template>
 
 <style scoped>
-    .header-image {
-        height: 100vh !important;
-    }
+.header-image {
+  height: 100vh !important;
+}
 
-    .arrow-down {
-        position: absolute;
-        bottom: 25px;
-    }
+.arrow-down {
+  position: absolute;
+  bottom: 25px;
+}
 </style>
