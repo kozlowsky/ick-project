@@ -28,7 +28,7 @@
         </v-layout>
         <v-layout id="animal-info" row wrap>
             <v-flex id="animal-img" xs12 sm8>
-                <v-img :src="require('../../../assets/owczarek.jpg')" height="300">
+                <v-img :src="require('../../../assets/pies/owczarek-1.jpeg')" height="300">
 
                 </v-img>
             </v-flex>
