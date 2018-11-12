@@ -1,14 +1,14 @@
 <script>
     export default {
-        name: "SpecieWiki",
-        props: ['adId'],
+        name: "WikiEntry",
         data() {
             return {
-                advert: null
-
+                advert: null,
+                adId: null,
             }
         },
-        created() {
+        mounted() {
+            this.adId = this.$route.params.id;
             this.advert = this.$store.getters.ads[this.adId];
         }
     }
@@ -29,7 +29,7 @@
                 {{ $store.getters.lorem }}
             </v-flex>
             <v-flex xs12 md4>
-                <v-img :src="require('../../../assets/pies/owczarek-1.jpeg')" aspect-ratio="1.75"></v-img>
+                <v-img :src="require('../assets/pies/owczarek-1.jpeg')" aspect-ratio="1.75"></v-img>
                 <v-toolbar color="cyan" class="elevation-0" dark><span class="subheading">Wymiary</span></v-toolbar>
                 <v-card flat>
                     <v-card-text>

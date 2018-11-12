@@ -6,8 +6,8 @@
             WikiSearch
         },
         methods: {
-            onSearch(filters) {
-                console.log(filters)
+            onSearch() {
+                this.$router.push({name: 'WikiEntry', params: {id: '1'}});
             }
         }
     }
