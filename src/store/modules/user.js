@@ -1,4 +1,5 @@
 import {LOGIN_USER} from '../actions/user'
+import {LOGOUT_USER} from "../actions/user";
 
 const state = {
     user: null
@@ -12,6 +13,9 @@ const getters = {
 const mutations = {
     [LOGIN_USER]: (state, payload) => {
         state.user = payload;
+    },
+    [LOGOUT_USER]: (state) => {
+        state.user = null;
     }
 }
 
@@ -28,6 +32,9 @@ const actions = {
 
             rootGetters.isUserLoggedIn ? resolve() : reject();
         });
+    },
+    [LOGOUT_USER]: ({commit}) => {
+        commit(LOGOUT_USER);
     }
 }
 

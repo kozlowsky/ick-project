@@ -18,11 +18,10 @@ export default {
                 <!--</div>-->
 
                 <v-flex xs12 sm12 md8 lg8>
-                    <div class="text-sm-center">
-                        <h1 class="display-2 font-weight-medium ">Przygarnij.Go</h1>
+                    <SearchPanel @onSearchChanged="$router.push('search')"/>
+                    <div class="text-sm-center mt-5">
                         <p class="headline">Witaj w schronisku on-line!</p>
                     </div>
-                    <SearchPanel @onSearchChanged="$router.push('search')"/>
                 </v-flex>
 
                 <div class="arrow-down">

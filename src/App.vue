@@ -1,7 +1,8 @@
 <template>
     <v-app>
+        <Navbar/>
         <Toast/>
-        <router-view/>
+        <router-view class="view"/>
     </v-app>
 </template>
 
@@ -9,12 +10,14 @@
 
     import Header from './components/Header'
     import Toast from './components/common/Toast'
+    import Navbar from './components/Navbar'
 
     export default {
         name: 'App',
         components: {
             Header,
-            Toast
+            Toast,
+            Navbar
         },
         data() {
             return {
@@ -35,4 +38,7 @@
 </script>
 
 <style>
+    .view {
+        margin-top: 5vh;
+    }
 </style>

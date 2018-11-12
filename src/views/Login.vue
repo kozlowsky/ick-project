@@ -15,7 +15,8 @@
                     login: this.user_login,
                     password: this.user_password
                 }).then(() => {
-                    this.successfulToast('Zalogowany pomyślnie!')
+                    this.successfulToast('Zalogowany pomyślnie!');
+                    this.$router.push("/");
                 }).catch(err => {
                     this.errorToast('Login i hasło są niepoprawne!');
                 })
