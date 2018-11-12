@@ -29,6 +29,20 @@
 
         <v-spacer></v-spacer>
 
+        <v-tooltip v-if="isUserLoggedIn" bottom>
+            <v-btn slot="activator" icon>
+                <v-icon>add</v-icon>
+            </v-btn>
+            <span>Dodaj ogłoszenie</span>
+        </v-tooltip>
+
+        <v-tooltip bottom>
+            <v-btn slot="activator" icon @click="$router.push({name: 'Wiki'})">
+                <v-icon>school</v-icon>
+            </v-btn>
+            <span>Encyklopedia gatunków</span>
+        </v-tooltip>
+
         <v-toolbar-items>
             <v-btn v-if="!isUserLoggedIn" flat @click="$router.push({name: 'Login'})">Zaloguj</v-btn>
             <v-btn v-if="!isUserLoggedIn" flat @click="$router.push({name: 'Register'})">Utwórz konto</v-btn>

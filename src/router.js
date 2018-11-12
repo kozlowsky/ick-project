@@ -6,6 +6,7 @@ import Register from './views/Register'
 import Cats from './views/Cats'
 import Advertisment from './views/Advertisment'
 import Search from './views/Search'
+import Wiki from './views/Wiki'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
             path: '/search',
             name: 'Search',
             component: Search
+        },
+        {
+            path: '/wiki',
+            name: 'Wiki',
+            component: Wiki
         },
         {
             path: '/secret',
