@@ -8,6 +8,7 @@ import Advertisment from './views/Advertisment'
 import Search from './views/Search'
 import Wiki from './views/Wiki'
 import WikiEntry from './views/WikiEntry'
+import AddAdvert from './views/AddAdvert'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
             path: '/secret',
             name: 'Cats',
             component: Cats
+        },
+        {
+            path: '/advert/add',
+            name:'AddAdvert',
+            component: AddAdvert
         }
     ]
 })

@@ -30,7 +30,7 @@
         <v-spacer></v-spacer>
 
         <v-tooltip v-if="isUserLoggedIn" bottom>
-            <v-btn slot="activator" icon>
+            <v-btn slot="activator" icon @click="$router.push({name: 'AddAdvert'})">
                 <v-icon>add</v-icon>
             </v-btn>
             <span>Dodaj ogłoszenie</span>
