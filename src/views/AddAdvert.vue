@@ -14,32 +14,32 @@
                                 <v-container grid-list-xl fluid>
                                     <v-layout row wrap>
                                         <v-flex xs12 md6>
-                                            <v-text-field outline label="Imię zwierzaka"></v-text-field>
+                                            <v-text-field label="Imię zwierzaka"></v-text-field>
                                         </v-flex>
                                         <v-flex>
-                                            <v-text-field outline label="Wiek"></v-text-field>
+                                            <v-text-field label="Wiek"></v-text-field>
                                         </v-flex>
                                     </v-layout>
                                     <v-layout row wrap>
                                         <v-flex xs12 md6>
-                                            <v-select outline label="Zwierzę" :items="animalsItems"></v-select>
+                                            <v-select label="Zwierzę" :items="animalsItems"></v-select>
                                         </v-flex>
                                         <v-flex>
-                                            <v-select outline label="Gatunek" :items="speciesItems"></v-select>
+                                            <v-select label="Gatunek" :items="speciesItems"></v-select>
                                         </v-flex>
                                     </v-layout>
                                     <v-layout row wrap>
                                         <v-flex xs12 md6>
-                                            <v-select outline label="Barwa" :items="colorItems"></v-select>
+                                            <v-select label="Barwa" :items="colorItems"></v-select>
                                         </v-flex>
                                         <v-flex>
-                                            <v-text-field outline label="Dodaj zdjęcie"
+                                            <v-text-field label="Dodaj zdjęcie"
                                                           prepend-icon='attach_file'></v-text-field>
                                         </v-flex>
                                     </v-layout>
                                     <v-layout row wrap>
                                         <v-flex xs12>
-                                            <v-textarea outline label="Opis"></v-textarea>
+                                            <v-textarea label="Opis"></v-textarea>
                                         </v-flex>
                                     </v-layout>
                                     <v-layout>
