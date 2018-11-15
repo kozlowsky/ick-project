@@ -304,5 +304,8 @@
 </script>
 
 <style scoped>
-
+    .background-image {
+        background-image: url("../assets/pexels-photo-213399.jpeg");
+        background-size: cover;
+    }
 </style>
