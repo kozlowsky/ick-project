@@ -42,7 +42,8 @@
                     dark>
                 <v-tab
                         v-for="(el, i) in tabs"
-                        :key="i">
+                        :key="i"
+                        :href="`#tab-${i+1}`">
                     {{ el }}
                 </v-tab>
             </v-tabs>
