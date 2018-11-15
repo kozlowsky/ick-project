@@ -8,6 +8,7 @@ import Advertisment from './views/Advertisment'
 import Search from './views/Search'
 import Wiki from './views/Wiki'
 import WikiEntry from './views/WikiEntry'
+import AddWikiEntry from './views/AddWikiEntry'
 import AddAdvert from './views/AddAdvert'
 
 Vue.use(Router)
@@ -38,6 +39,11 @@ export default new Router({
             path: '/search',
             name: 'Search',
             component: Search
+        },
+        {
+            path: '/wiki/add',
+            name: 'AddWikiEntry',
+            component: AddWikiEntry
         },
         {
             path: '/wiki/:id',
