@@ -2,9 +2,10 @@
 import SearchPanel from "../components/SearchPanel";
 import AdvertList from "../components/adverts/AdvertList";
 
+
 export default {
     name: "Search",
-    components: { SearchPanel, AdvertList },
+    components: { SearchPanel, AdvertList},
     data () {
         return {
             breed: ''
@@ -17,6 +18,7 @@ export default {
             } else{
                 this.breed = ''
             }
+            window.scrollBy(0, 700);
         }
     }
 }

@@ -1,16 +1,18 @@
 <script>
 import between from "vuelidate/src/validators/between";
 import numeric from "vuelidate/src/validators/numeric";
+import PopularSearches from "../components/adverts/PopularSearches";
 
 export default {
     name: "SearchPanel",
+    components: {PopularSearches},
     data () {
         return {
             filters: {
-                specie: '', 
-                gender: '', 
-                breed: '', 
-                color: '',
+                specie: '',
+                gender: ['Obojętne'],
+                breed: '',
+                color: ['Obojętne'],
                 age: 0
             },
             colors: [],
@@ -28,6 +30,11 @@ export default {
         setBreeds () {
             let index = this.species.indexOf(this.filters.specie);
             this.currentBreeds = this.breeds[index];
+        },
+        popularSpecieSelected () {
+            let index = this.species.indexOf(0);
+            this.currentBreeds = this.breeds[index];
+            this.$emit('onSearchChanged', this.filters);
         }
     },
     validations: {
@@ -60,6 +67,9 @@ export default {
             <p class="title">Znajdź pupila</p>
         </v-card-title>
         <v-card-text>
+            <v-layout>
+                <PopularSearches @onSearchChanged="popularSpecieSelected"></PopularSearches>
+            </v-layout>
             <v-layout row>
                 <v-autocomplete v-model="filters.specie" label="Wpisz gatunek pupila" :items="species" @change="setBreeds">
                 </v-autocomplete>
@@ -71,16 +81,11 @@ export default {
             <v-layout row>
                 <v-flex xs12 md4>
                     <p class="subheading">Płeć</p>
-                    <v-radio-group v-model="filters.gender">
-                        <v-radio v-for="el in genders" :key="el" :label="`${el}`" :value="el"></v-radio>
-                    </v-radio-group>
+                    <v-checkbox v-for="el in genders" :key="el" :label="`${el}`" :value="`${el}`" v-model="filters.gender"></v-checkbox>
                 </v-flex>
                 <v-flex xs12 md4>
                     <p class="subheading">Barwa</p>
-                    <v-radio-group v-model="filters.color">
-                        <v-radio v-for="el in colors" :key="el" :label="`${el}`" :value="el">
-                        </v-radio>
-                    </v-radio-group>
+                    <v-checkbox v-for="el in colors" :key="el" :label="`${el}`" :value="`${el}`" v-model="filters.color"></v-checkbox>
                 </v-flex>
                 <v-flex xs12 md4>
                     <p class="subheading">Wiek</p>
