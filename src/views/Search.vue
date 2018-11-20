@@ -18,7 +18,7 @@ export default {
             } else{
                 this.breed = ''
             }
-            window.scrollBy(0, 700);
+            window.scrollTo(0, 700);
         }
     }
 }

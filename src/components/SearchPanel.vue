@@ -35,6 +35,7 @@ export default {
             let index = this.species.indexOf(0);
             this.currentBreeds = this.breeds[index];
             this.$emit('onSearchChanged', this.filters);
+            window.scrollTo(0, 700);
         }
     },
     validations: {
