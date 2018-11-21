@@ -58,7 +58,7 @@
             </v-flex>
             <v-flex xs12 md8>
                 <v-layout row>
-                    {{ $store.getters.lorem }}
+                    {{ $store.getters.contactText}}
                 </v-layout>
             </v-flex>
         </v-layout>

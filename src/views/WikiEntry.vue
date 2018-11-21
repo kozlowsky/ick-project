@@ -24,9 +24,8 @@
             </v-btn>
         </v-layout>
         <v-layout row wrap>
-            <v-flex xs12 md8>
-                {{ $store.getters.lorem }}
-                {{ $store.getters.lorem }}
+            <v-flex xs12 md8 >
+                <p class="display-1">{{ $store.getters.wikiText }}</p>
             </v-flex>
             <v-flex xs12 md4>
                 <v-img :src="require('../assets/pies/owczarek-1.jpeg')" aspect-ratio="1.75"></v-img>
@@ -53,10 +52,14 @@
                 </v-toolbar>
                 <v-card flat>
                     <v-card-text>
-                        <v-layout row wrap>
-                            <v-flex xs12 md6>Inne nazwy</v-flex>
-                            <v-flex xs12 md6>lorem ipsum</v-flex>
-                        </v-layout>
+                            <v-layout row wrap>
+                                <v-flex xs12 md6>Długość życia: </v-flex>
+                                <v-flex xs12 md6>9 do 13 lat</v-flex>
+                            </v-layout>
+                            <v-layout row wrap>
+                                <v-flex xs12 md6>Kraj patronacki: </v-flex>
+                                <v-flex xs12 md6>Niemcy</v-flex>
+                            </v-layout>
                     </v-card-text>
                 </v-card>
             </v-flex>

@@ -56,7 +56,7 @@
             </v-flex>
         </v-layout>
         <v-layout id="advert-info" class="my-3 px-4" row wrap>
-            <p v-text="$store.getters.lorem"></p>
+            <p v-text="$store.getters.adText"></p>
         </v-layout>
     </v-container>
 </template>

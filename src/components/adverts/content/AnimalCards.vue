@@ -24,8 +24,7 @@
                 <p class="font-weight-medium">{{ disease.name }}</p>
             </v-flex>
             <v-flex xs12 md8>
-                <p>Maecenas ultricies viverra ligula, dignissim vehicula nibh convallis nec. Etiam vulputate scelerisque
-                    nunc. In vel dapibus tellus.</p>
+                <p>{{$store.getters.diseaseText}}</p>
             </v-flex>
         </v-layout>
         <p class="headline">Karta szczepień</p>
@@ -37,8 +36,7 @@
                 <p class="font-weight-medium">{{ vaccine.name }}</p>
             </v-flex>
             <v-flex xs12 md8>
-                <p>Maecenas ultricies viverra ligula, dignissim vehicula nibh convallis nec. Etiam vulputate scelerisque
-                    nunc. In vel dapibus tellus.</p>
+                <p>{{$store.getters.vaccineText}}</p>
             </v-flex>
         </v-layout>
     </v-container>
