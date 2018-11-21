@@ -117,6 +117,8 @@
                                                                     </v-btn>
                                                                 </v-date-picker>
                                                             </v-menu>
+                                                            <v-text-field label="Dodaj pliki (skany, zdjęcia)"
+                                                                          prepend-icon='attach_file'></v-text-field>
                                                         </v-flex>
                                                         <v-flex shrink>
                                                             <v-btn large flat dark icon color="green"
@@ -194,6 +196,8 @@
                                                                     </v-btn>
                                                                 </v-date-picker>
                                                             </v-menu>
+                                                            <v-text-field label="Dodaj pliki (skany, zdjęcia)"
+                                                                          prepend-icon='attach_file'></v-text-field>
                                                         </v-flex>
                                                         <v-flex shrink>
                                                             <v-btn large flat dark icon color="green"
