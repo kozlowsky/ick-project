@@ -11,12 +11,14 @@ export default {
             filters: {
                 specie: '',
                 gender: ['Obojętne'],
+                typesOfAd: ['Obojętne'],
                 breed: '',
                 color: ['Obojętne'],
                 age: 0
             },
             colors: [],
             species: [],
+            typesOfAd: ['Adopcja', 'Wirtualna adopcja', 'Wyprowadzanie na spacer', 'Obojętne'],
             genders: [
                 'Samiec',
                 'Samica',
@@ -34,6 +36,10 @@ export default {
         popularSpecieSelected () {
             let index = this.species.indexOf(0);
             this.currentBreeds = this.breeds[index];
+            this.$emit('onSearchChanged', this.filters);
+            window.scrollTo(0, 700);
+        },
+        search() {
             this.$emit('onSearchChanged', this.filters);
             window.scrollTo(0, 700);
         }
@@ -80,15 +86,19 @@ export default {
                 </v-select>
             </v-layout>
             <v-layout row>
-                <v-flex xs12 md4>
+                <v-flex xs12 md3>
+                    <p class="subheading">Typ ogłoszenia</p>
+                    <v-checkbox v-for="el in typesOfAd" :key="el" :label="`${el}`" :value="`${el}`" v-model="filters.typesOfAd"></v-checkbox>
+                </v-flex>
+                <v-flex xs12 md3>
                     <p class="subheading">Płeć</p>
                     <v-checkbox v-for="el in genders" :key="el" :label="`${el}`" :value="`${el}`" v-model="filters.gender"></v-checkbox>
                 </v-flex>
-                <v-flex xs12 md4>
+                <v-flex xs12 md3>
                     <p class="subheading">Barwa</p>
                     <v-checkbox v-for="el in colors" :key="el" :label="`${el}`" :value="`${el}`" v-model="filters.color"></v-checkbox>
                 </v-flex>
-                <v-flex xs12 md4>
+                <v-flex xs12 md3>
                     <p class="subheading">Wiek</p>
                     <v-text-field v-model="filters.age" :error-messages="ageErrors" @blur="$v.age.$touch()" @input="$v.age.$touch()">
                     </v-text-field>
@@ -98,7 +108,7 @@ export default {
         </v-card-text>
         <v-card-actions>
             <v-spacer />
-            <v-btn :disabled="filters.specie === ''" color="success" @click="$emit('onSearchChanged', filters)">Szukaj</v-btn>
+            <v-btn :disabled="filters.specie === ''" color="success" @click="search">Szukaj</v-btn>
             <v-spacer />
         </v-card-actions>
     </v-card>

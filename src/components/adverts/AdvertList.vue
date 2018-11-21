@@ -10,7 +10,6 @@ export default {
             advertsCount: 10
         }
     }
-
 }
 </script>
 
