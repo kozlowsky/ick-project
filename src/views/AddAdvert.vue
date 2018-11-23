@@ -244,7 +244,10 @@
                                 <v-checkbox
                                         v-model="rules_checkbox"
                                         label="Zaakceptuj regulamin serwisu"></v-checkbox>
-                                <v-btn class="success">Dodaj ogłoszenie
+                                <v-btn
+                                        class="success"
+                                        @click="$router.push({name: 'Advertisment', params: {id: '1'}})">
+                                    Dodaj ogłoszenie
                                 </v-btn>
                             </v-layout>
                         </v-form>

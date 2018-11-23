@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
 .header-image {
-  height: 100vh !important;
+    height: 100vh !important;
 }
 
 .arrow-down {

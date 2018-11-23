@@ -69,8 +69,7 @@ const state = {
         'biały',
         'brązowy',
         'czarny',
-        'rudy',
-        'Obojętne'
+        'rudy'
     ]
 }
 

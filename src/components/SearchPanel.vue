@@ -10,19 +10,18 @@ export default {
         return {
             filters: {
                 specie: '',
-                gender: ['Obojętne'],
-                typesOfAd: ['Obojętne'],
+                gender: [],
+                typesOfAd: [],
                 breed: '',
-                color: ['Obojętne'],
+                color: [],
                 age: 0
             },
             colors: [],
             species: [],
-            typesOfAd: ['Adopcja', 'Wirtualna adopcja', 'Wyprowadzanie na spacer', 'Obojętne'],
+            typesOfAd: ['Adopcja', 'Wirtualna adopcja', 'Wyprowadzanie na spacer'],
             genders: [
                 'Samiec',
-                'Samica',
-                'Obojętne'
+                'Samica'
             ],
             breeds: [],
             currentBreeds: []
@@ -84,6 +83,9 @@ export default {
             <v-layout row>
                 <v-select v-model="filters.breed" :items="currentBreeds" :disabled="filters.specie === ''" label="Wpisz gatunek/rasę zwierzęcia">
                 </v-select>
+            </v-layout>
+            <v-layout row>
+                <p class="title">Zaznacz aby zawęzić wyszukiwanie:</p>
             </v-layout>
             <v-layout row>
                 <v-flex xs12 md3>
