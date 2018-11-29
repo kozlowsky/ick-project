@@ -32,15 +32,15 @@
 <template>
     <v-card>
         <v-card-title>
-            <p class="title">Znajdź gatunek</p>
+            <p class="title">Wyszukaj informacje o gatunku</p>
         </v-card-title>
         <v-card-text>
             <v-layout row>
-                <v-autocomplete v-model="filters.specie" label="Wpisz gatunek" :items="species" @change="setBreeds">
+                <v-autocomplete v-model="filters.specie" label="Wybierz gatunek" :items="species" @change="setBreeds">
                 </v-autocomplete>
             </v-layout>
             <v-layout row>
-                <v-select v-model="filters.breed" :items="currentBreeds" :disabled="filters.specie === ''" label="Wpisz gatunek/rasę zwierzęcia">
+                <v-select v-model="filters.breed" :items="currentBreeds" :disabled="filters.specie === ''" label="Wybierz rasę zwierzęcia">
                 </v-select>
             </v-layout>
         </v-card-text>

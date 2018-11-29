@@ -30,15 +30,15 @@
         <v-spacer></v-spacer>
 
         <v-tooltip v-if="isUserLoggedIn" bottom>
-            <v-btn slot="activator" icon @click="$router.push({name: 'AddAdvert'})">
-                <v-icon>add</v-icon>
+            <v-btn slot="activator" flat @click="$router.push({name: 'AddAdvert'})">
+                <v-icon left>add</v-icon> Dodaj ogłoszenie
             </v-btn>
-            <span>Dodaj ogłoszenie</span>
+            <span>Dodaj nowe ogłoszenie</span>
         </v-tooltip>
 
         <v-tooltip bottom>
-            <v-btn slot="activator" icon @click="$router.push({name: 'Wiki'})">
-                <v-icon>school</v-icon>
+            <v-btn slot="activator" flat @click="$router.push({name: 'Wiki'})">
+                <v-icon left>school</v-icon<span>Encyklopedia gatunków
             </v-btn>
             <span>Encyklopedia gatunków</span>
         </v-tooltip>

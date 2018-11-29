@@ -17,7 +17,7 @@
                                             <v-text-field label="Imię zwierzaka"></v-text-field>
                                         </v-flex>
                                         <v-flex>
-                                            <v-text-field label="Wiek"></v-text-field>
+                                            <v-text-field label="Wiek" type="number" :rules="[rules.age]"></v-text-field>
                                         </v-flex>
                                     </v-layout>
                                     <v-layout row wrap>
@@ -263,6 +263,9 @@
         name: "AddAdvert",
         data() {
             return {
+                rules: {
+                    age: v => v >= 0 || "Wiek nie może być ujemny"
+                },
                 diseases: [],
                 newDisease: {
                     name: '',

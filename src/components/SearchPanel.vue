@@ -8,6 +8,9 @@ export default {
     components: {PopularSearches},
     data () {
         return {
+            rules: {
+                age: v => v >= 0 || "Wiek nie może być ujemny"
+            },
             filters: {
                 specie: '',
                 gender: [],
@@ -102,7 +105,7 @@ export default {
                 </v-flex>
                 <v-flex xs12 md3>
                     <p class="subheading">Wiek</p>
-                    <v-text-field v-model="filters.age" :error-messages="ageErrors" @blur="$v.age.$touch()" @input="$v.age.$touch()">
+                    <v-text-field :rules="[rules.age]" type="number" v-model="filters.age" :error-messages="ageErrors"  @blur="$v.age.$touch()" @input="$v.age.$touch()">
                     </v-text-field>
                 </v-flex>
 
