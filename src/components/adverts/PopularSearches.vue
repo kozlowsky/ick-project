@@ -1,7 +1,7 @@
 <template>
     <v-layout column>
         <v-layout row>
-            <v-label>Popularne gatunki: </v-label>
+            <v-label>Popularne wyszukiwania: </v-label>
         </v-layout>
         <v-layout row>
             <v-btn
@@ -18,7 +18,7 @@
         name: "PopularSearches",
         data () {
             return {
-                species: ['husky', 'cocker spaniel', 'shih tzu', 'jamnik']
+                species: ['pies', 'kot', 'labrador', 'kot perski', 'świnia', 'koń']
             }
         }
     }
