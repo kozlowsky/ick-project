@@ -21,7 +21,7 @@ export default new Router({
             component: HomePage
         },
         {
-            path: '/login',
+            path: '/login/:next',
             name: 'Login',
             component: Login
         },

@@ -15,8 +15,13 @@
                     login: this.user_login,
                     password: this.user_password
                 }).then(() => {
+
                     this.successfulToast('Zalogowany pomyślnie!');
-                    this.$router.go(-1);
+
+                    console.log(this.$route.params.next)
+                    
+                    this.$router.push({name: this.$route.params.next})
+                  
                 }).catch(err => {
                     this.errorToast('Login i hasło są niepoprawne!');
                 })

@@ -29,8 +29,8 @@
 
         <v-spacer></v-spacer>
 
-        <v-tooltip v-if="isUserLoggedIn" bottom>
-            <v-btn slot="activator" flat @click="$router.push({name: 'AddAdvert'})">
+        <v-tooltip bottom>
+            <v-btn slot="activator" flat @click="isUserLoggedIn ? $router.push({ name: 'AddAdvert'}) : $router.push({name: 'Login', params: {next: 'AddAdvert' }})">
                 <v-icon left>add</v-icon> Dodaj ogłoszenie
             </v-btn>
             <span>Dodaj nowe ogłoszenie</span>
@@ -44,7 +44,7 @@
         </v-tooltip>
 
         <v-toolbar-items>
-            <v-btn v-if="!isUserLoggedIn" flat @click="$router.push({name: 'Login'})">Zaloguj</v-btn>
+            <v-btn v-if="!isUserLoggedIn" flat @click="$router.push({name: 'Login', params: {next: 'HomePage' }})">Zaloguj</v-btn>
             <v-btn v-if="!isUserLoggedIn" flat @click="$router.push({name: 'Register'})">Utwórz konto</v-btn>
             <v-btn v-if="isUserLoggedIn" flat @click="logout">Wyloguj</v-btn>
         </v-toolbar-items>
