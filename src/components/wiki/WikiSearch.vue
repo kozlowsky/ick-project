@@ -48,7 +48,7 @@
             <v-spacer />
             <v-btn :disabled="!isUserLoggedIn" color="info" @click="$router.push({name: 'AddWikiEntry'})">Dodaj informacje</v-btn>
 
-            <v-btn :disabled="filters.specie === ''" color="success" @click="$emit('onSearch', filters)">Przejdź</v-btn>
+            <v-btn :disabled="filters.specie === ''" color="success" @click="$emit('onSearch', filters)">Wyszukaj</v-btn>
             <v-spacer />
         </v-card-actions>
     </v-card>

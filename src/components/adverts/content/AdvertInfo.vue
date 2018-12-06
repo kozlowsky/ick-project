@@ -18,7 +18,7 @@
     <v-container fluid grid-list-xl>
         <v-layout id="advert-info" row wrap>
             <h1 class="display-1">
-                {{ advert.title }} - {{ advert.type }}
+                {{ advert.title }}
             </h1>
         </v-layout>
         <v-layout id="animal-info" row wrap>

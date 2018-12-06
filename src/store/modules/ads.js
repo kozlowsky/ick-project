@@ -33,7 +33,7 @@ const state = {
             advertiserType: 'Prywatny',
             advertiserInfo: null,
             advertiserTelephone: '800999312',
-            title: 'Piesek Leszek',
+            title: 'Reksio',
             type: 'Wirtualna Adopcja',
             description: 'Główna postać ze znajej kreskówki nie radzi sobie z końcem kariery' +
                 'prosi o wsparcie',

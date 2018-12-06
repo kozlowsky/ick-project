@@ -1,30 +1,16 @@
 const state = {
     species: [
-        'kot',
-        'koń',
-        'pająk',
-        'pies',
-        'wąż',
-        'żółw'
+        'Pies',
+        'Kot',
+        'Koń',
+        'Pająk',
+        'Świnia',
+        'Wąż',
+        'Żółw'
     ],
     breeds: [
         [
-            'Perski',
-            'Syjamski',
-            'Norweski'
-        ],
-        [
-            'fryzyjski',
-            'islandzki',
-            'belgijski',
-            'Shire'
-        ],
-        [
-            'czworonolicy',
-            'malowany',
-            'sundajski'
-        ],
-        [
+            "owczarek niemiecki",
             "affenpinscher",
             "african",
             "airedale",
@@ -57,11 +43,31 @@ const state = {
             "mastiff"
         ],
         [
+            'Perski',
+            'Syjamski',
+            'Norweski'
+        ],
+        [
+            'fryzyjski',
+            'islandzki',
+            'belgijski',
+            'Shire'
+        ],
+        [
+            'czworonolicy',
+            'malowany',
+            'sundajski'
+        ],
+        [
             'pyton',
             'boa'
         ],
         [
             'tarantula',
+            'ptasznik'
+        ],
+        [
+            'rasowy',
             'ptasznik'
         ]
     ],

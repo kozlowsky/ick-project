@@ -307,8 +307,8 @@
         },
         mounted() {
             this.animalsItems = this.$store.getters.getSpecies;
-            this.colorItems = this.$store.getters.getColors;
-            this.speciesItems = this.$store.getters.getSpecies;
+            this.colorItems = ["Biały", "Czarny", "Rudy"]
+            this.speciesItems = ["Labrador", "Mieszaniec", "Terrier", "Owczarek Niemiecki"]
         }
     }
 </script>
