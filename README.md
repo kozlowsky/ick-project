@@ -1,6 +1,10 @@
 # cats
 
+## Required
+https://nodejs.org/en/download/
+
 ## Project setup
+Go to folder with code and type in console
 ```
 npm install
 ```
