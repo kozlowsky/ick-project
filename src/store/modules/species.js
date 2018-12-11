@@ -40,7 +40,8 @@ const state = {
             "malamute",
             "malinois",
             "maltese",
-            "mastiff"
+            "mastiff",
+            "owczarek niemiecki"
         ],
         [
             'Perski',

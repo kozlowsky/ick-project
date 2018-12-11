@@ -17,7 +17,7 @@ export default {
                 typesOfAd: [],
                 breed: '',
                 color: [],
-                age: 0
+                age: null
             },
             colors: [],
             species: [],

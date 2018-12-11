@@ -29,6 +29,14 @@
 
         <v-spacer></v-spacer>
 
+
+        <v-tooltip bottom>
+            <v-btn slot="activator" flat @click="$router.push('/')">
+                <v-icon left>search</v-icon> Wyszukaj
+            </v-btn>
+            <span>Wyszukaj</span>
+        </v-tooltip>
+
         <v-tooltip bottom>
             <v-btn slot="activator" flat @click="isUserLoggedIn ? $router.push({ name: 'AddAdvert'}) : $router.push({name: 'Login', params: {next: 'AddAdvert' }})">
                 <v-icon left>add</v-icon> Dodaj ogłoszenie
@@ -38,7 +46,7 @@
 
         <v-tooltip bottom>
             <v-btn slot="activator" flat @click="$router.push({name: 'Wiki'})">
-                <v-icon left>school</v-icon<span>Encyklopedia gatunków
+                <v-icon left>school</v-icon>Encyklopedia gatunków
             </v-btn>
             <span>Encyklopedia gatunków</span>
         </v-tooltip>
